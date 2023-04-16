@@ -46,7 +46,6 @@ export const Cities = (props) => {
         (city) => city.id === selectedCityId
       );
       if (selectedCity) {
-        setShowDetails([selectedCity]);
         setSelectedTab(selectedCity.name);
       }
     }
