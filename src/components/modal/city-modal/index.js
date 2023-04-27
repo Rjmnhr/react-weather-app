@@ -28,7 +28,7 @@ const CityListModal = () => {
       <ModalStyledCity>
         <button onClick={() => setModal2Open(true)}>+</button>
         <Modal
-          bodyStyle={{ height: 400, overflow: "auto" }}
+          bodyStyle={{ height: "300px", overflow: "auto" }}
           className="modal"
           title="Cities"
           centered

@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -44,4 +46,15 @@ padding: 10px;
   to {
     transform: rotate(360deg);
   }
+
+
+ 
+}
+
+
+@media (max-width: 768px){
+    .ant-modal .ant-modal-content{
+      width: 300px;
+      
+    }
 }

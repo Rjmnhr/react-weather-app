@@ -12,7 +12,6 @@ export const CityStyled = styled.div`
   .cities-list {
     width: 28%;
     height: 100%;
-    border: 1px solid red;
   }
   .city-content {
     width: 60%;
@@ -100,6 +99,11 @@ export const CityStyled = styled.div`
   .selected-fav-container {
     color: gold;
   }
+
+  .ant-modal css-dev-only-do-not-override-1e3x2xa modal {
+    width: 100px;
+    background-color: red;
+  }
   @media (max-width: 768px) {
     .cities-list {
       width: 20%;
@@ -119,3 +123,7 @@ export const CityStyled = styled.div`
     }
   }
 `;
+
+{
+  /* <div role="dialog" aria-labelledby=":r1:" aria-modal="true" class="ant-modal css-dev-only-do-not-override-1e3x2xa modal" style="width: 520px;display: none;"></div> */
+}

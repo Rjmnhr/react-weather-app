@@ -30,7 +30,7 @@ const CityListHomeModal = () => {
       <HomeModalStyled>
         <button onClick={() => setModal2Open(true)}>Add new city</button>
         <Modal
-          bodyStyle={{ height: 400, overflow: "auto" }}
+          bodyStyle={{ height: 300, overflow: "auto" }}
           className="modal"
           centered
           title="Cities"
