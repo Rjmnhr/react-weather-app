@@ -4,15 +4,16 @@ const SideBarStyled = styled.div`
   .sidebar-container {
     color: white;
     width: 200px;
-    height: 87vh;
+    height: 100vh;
     margin: 0;
     background: ${(props) => (props.theme === "light" ? "#1c1c1c" : "black")};
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     padding-left: 0;
-    padding-top: 30px;
+
     position: static;
+    /* border: 1px solid red; */
   }
   .Btn-container {
     width: 100%;
@@ -38,11 +39,56 @@ const SideBarStyled = styled.div`
       props.theme === "light" ? "#1c1c1c" : "black"};
     justify-content: center;
 
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     color: white;
+    /* border: 1px solid red; */
   }
   .title-content:hover {
     cursor: pointer;
+  }
+  .theme {
+    display: flex;
+    gap: 10px;
+    padding: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+    /* border: 1px solid red; */
+  }
+
+  @media (max-width: 768px) {
+    .sidebar-container {
+      width: 100%;
+      height: 12vh;
+      flex-direction: row;
+    }
+    .container-one {
+      display: flex;
+      align-items: stretch;
+      justify-content: start;
+      gap: 20px;
+    }
+
+    .menu-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* border: 1px solid red; */
+    }
+    .title {
+      padding-bottom: 0;
+      height: 100%;
+    }
+    .theme {
+      align-items: center;
+      margin-top: 0;
+      width: 200px;
+      margin-bottom: 0;
+      font-size: smaller;
+    }
+    .Btn-container {
+      height: 100%;
+      width: 100px;
+    }
   }
 `;
 

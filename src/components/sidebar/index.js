@@ -42,52 +42,41 @@ const SideBar = (props) => {
   return (
     <>
       <SideBarStyled theme={theme}>
-        <div className="title">
-          <h2 className="title-content">
-            <span
-              onClick={() => showActive("Home")}
-              style={{ color: "violet" }}
-            >
-              Weather
-            </span>
-            App
-          </h2>
-        </div>
-
         <div className="sidebar-container">
-          <div>
-            {sidebarTabs.map((item) => {
-              return (
-                <button
-                  style={{ fontWeight: "bolder" }}
-                  className={
-                    selectedTab === item.tab
-                      ? "Btn-container selected-tab-container"
-                      : "Btn-container"
-                  }
-                  onClick={() => showActive(item.tab)}
+          <div className="container-one">
+            <div className="title">
+              <h2 className="title-content">
+                <span
+                  onClick={() => showActive("Home")}
+                  style={{ color: "violet" }}
                 >
-                  {item.tab}
-                </button>
-              );
-            })}
+                  Weather
+                </span>
+                App
+              </h2>
+            </div>
+            <div className="menu-container">
+              {sidebarTabs.map((item) => {
+                return (
+                  <button
+                    style={{ fontWeight: "bolder" }}
+                    className={
+                      selectedTab === item.tab
+                        ? "Btn-container selected-tab-container"
+                        : "Btn-container"
+                    }
+                    onClick={() => showActive(item.tab)}
+                  >
+                    {item.tab}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           <div className="theme">
-            <div
-              style={{
-                display: "flex",
-                gap: "10px",
-                margin: "10px",
-                justifyContent: "center",
-              }}
-            >
-              <p style={{ margin: "0", padding: "0" }}>Dark mode</p>
-              <Switch
-                style={{ marginBottom: "50px", color: "white" }}
-                onChange={handleTheme}
-              ></Switch>
-            </div>
+            <p style={{ margin: "0", padding: "0" }}>Dark mode</p>
+            <Switch onChange={handleTheme}></Switch>
           </div>
         </div>
       </SideBarStyled>

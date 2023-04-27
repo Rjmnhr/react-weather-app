@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HomeStyled = styled.div`
   .home-page-container {
-    color: ${(props) => (props.theme === "light" ? " #1c1c1c" : "gray")};
+    color: ${(props) => (props.theme === "light" ? " #1c1c1c" : "white")};
 
     /* border: 1px solid black; */
     display: flex;

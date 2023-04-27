@@ -46,10 +46,11 @@ export const Cities = (props) => {
         (city) => city.id === selectedCityId
       );
       if (selectedCity) {
+        setShowDetails([selectedCity]);
         setSelectedTab(selectedCity.name);
       }
     }
-  }, [citiesSelected]);
+  }, [citiesSelected, setShowDetails]);
 
   return (
     <>
@@ -58,7 +59,9 @@ export const Cities = (props) => {
           <div className="cities-list">
             <div className="top-bar-container">
               <h3>Cities</h3>
-              <CityListModal />
+              <div style={{ paddingBottom: "8px" }}>
+                <CityListModal />
+              </div>
             </div>
             <div className="content-container">
               {selectedCities.length > 0 ? (
@@ -95,15 +98,14 @@ export const Cities = (props) => {
           </div>
           {showDetails.length > 0 && (
             <div className="city-content">
-              <div
-                style={{ width: "97%", color: "white" }}
-                className="header-container"
-              >
+              <div className="top-bar-container">
                 {showDetails.map((item) => {
                   return (
                     <>
-                      <p style={{ color: "violet" }}>{item.name}</p>
-                      <FavButton arr={showDetails} />
+                      <h3>{item.name}</h3>
+                      <span style={{ color: "white" }}>
+                        <FavButton arr={showDetails} />
+                      </span>
                     </>
                   );
                 })}

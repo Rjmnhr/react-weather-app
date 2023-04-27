@@ -14,6 +14,12 @@ const HeaderWrapper = styled.div`
     width: 1100px;
     position: static;
   }
+
+  @media (max-width: 768px) {
+    .header-container {
+      width: 100%;
+    }
+  }
 `;
 
 export default HeaderWrapper;

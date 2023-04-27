@@ -12,6 +12,7 @@ export const CityStyled = styled.div`
   .cities-list {
     width: 28%;
     height: 100%;
+    border: 1px solid red;
   }
   .city-content {
     width: 60%;
@@ -42,14 +43,13 @@ export const CityStyled = styled.div`
     background-color: black;
     display: flex;
     /* border-radius: 8px 8px 0px 0px; */
-    gap: 200px;
+
     margin: 0;
-    width: 94%;
+    justify-content: space-between;
+
     height: 10%;
     padding: 10px;
-    margin-right: 20px;
-    box-shadow: 0px 5px 5px 0px
-      ${(props) => (props.theme === "light" ? "#49494a" : "black")};
+    align-items: center;
   }
   .content-container p {
     margin: 5px;
@@ -81,8 +81,8 @@ export const CityStyled = styled.div`
     color: ${(props) => (props.theme === "light" ? "black" : "white")};
   }
   .sub-content {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     /* background: yellow; */
   }
   .header-container {
@@ -99,5 +99,23 @@ export const CityStyled = styled.div`
   }
   .selected-fav-container {
     color: gold;
+  }
+  @media (max-width: 768px) {
+    .cities-list {
+      width: 20%;
+      height: 80%;
+    }
+
+    .city-content {
+      width: 20%;
+      height: 82%;
+      /* background: powderblue; */
+
+      /* border-radius: 8px; */
+    }
+    .cities-container {
+      gap: 10px;
+      margin-left: 0;
+    }
   }
 `;
