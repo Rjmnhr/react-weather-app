@@ -100,10 +100,6 @@ export const CityStyled = styled.div`
     color: gold;
   }
 
-  .ant-modal css-dev-only-do-not-override-1e3x2xa modal {
-    width: 100px;
-    background-color: red;
-  }
   @media (max-width: 768px) {
     .cities-list {
       width: 20%;
@@ -123,7 +119,3 @@ export const CityStyled = styled.div`
     }
   }
 `;
-
-{
-  /* <div role="dialog" aria-labelledby=":r1:" aria-modal="true" class="ant-modal css-dev-only-do-not-override-1e3x2xa modal" style="width: 520px;display: none;"></div> */
-}

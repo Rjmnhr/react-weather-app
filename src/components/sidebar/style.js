@@ -65,7 +65,8 @@ const SideBarStyled = styled.div`
       display: flex;
       align-items: stretch;
       justify-content: start;
-      gap: 20px;
+      gap: 10px;
+      margin-left: 10px;
     }
 
     .menu-container {
@@ -84,10 +85,18 @@ const SideBarStyled = styled.div`
       width: 200px;
       margin-bottom: 0;
       font-size: smaller;
+      margin-left: 20px;
     }
     .Btn-container {
       height: 100%;
       width: 100px;
+    }
+    .title h2 {
+      font-size: 18px;
+    }
+    .selected-tab-container {
+      border-bottom: 2px solid violet;
+      background-color: ${(props) => (props.theme === "light" ? "black" : "")};
     }
   }
 `;

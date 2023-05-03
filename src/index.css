@@ -1,12 +1,9 @@
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0; 
   background: transparent; 
-} */
-
-.ant-modal css-dev-only-do-not-override-1e3x2xa modal {
-  width: 100px;
-  background-color: red;
 }
+
+
 
 body {
   margin: 0;

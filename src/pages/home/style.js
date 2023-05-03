@@ -48,4 +48,7 @@ export const HomeStyled = styled.div`
     color: ${(props) => (props.theme === "light" ? " black" : "white")};
     font-weight: bold;
   }
+  .home {
+    height: 70vh;
+  }
 `;
